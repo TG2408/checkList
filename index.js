@@ -1,15 +1,9 @@
-// document.addEventListener('keydown',function(e) {
-//     console.log(e)
-// })
-
-// //e.key = Shift
-
 let last = -1;
 
 let x = document.getElementsByClassName('checkbx');
 for (let i=0; i<x.length; i++) {
     x[i].addEventListener("click", function(e) {
-        if (e.shiftKey === true) {
+        if (e.shiftKey && x[i].checked) {
           if (last > -1) {
               if (last < i) {
                 for (let j=last; j<=i; j++){
